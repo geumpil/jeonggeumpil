@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="reset.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #header {
+            background-color: beige;
+            padding: 0 32px;
+        }
+
+        .header_container {
+            max-width: 1300px;
+            margin:0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin:0 auto;
+        }
+
+        .logo {
+            max-width:150px;
+            padding: 16px 0;
+        }
+
+        .main_cate {
+            display: flex;
+        }
+
+        .main_cate_list > a {
+            display: block;
+            padding: 20px;
+        }
+
+        .main_cate_list > a:hover {
+            color: coral;
+            font-weight: 600;
+        }
+
+        .sub_cate {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .ham {
+            display: none;
+        }
+
+        #main_banner {
+            height: 600px;
+        }
+
+        #main_banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #content {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-family: 'GmarketSansMedium';
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 100px;
+            line-height: 32px;
+        }
+
+        .cont_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .sub_cont {
+            display: flex;
+            gap: 16px;
+        }
+
+        .sub_cont > figure {
+            background-color: gray;
+            height: 430px;
+            width: 100%;
+        }
+
+        .sub_cont:nth-child(2n) > figure {
+            order: 1;
+        }
+        
+        .scont {
+            width: 100%;
+            height: 430px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .stitle {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .subtext {
+            padding-top: 30px;
+            font-size: 16px;
+            max-width: 400px;
+            margin:0 auto;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #414141;
+            color:white;
+            padding: 40px 32px;
+        }
+
+        .footer_container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer_nav {
+            margin-bottom: 32px;
+        }
+
+        .footer_nav > ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+
+        footer a {
+            font-size:16px;
+            color:white;
+        }
+
+        .foot_cont a:hover {
+            font-weight: bold;
+            color: blanchedalmond;
+        }
+
+        @media screen and (max-width:1300px) {
+            .sub_cont {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            #header {
+                padding: 0 16px;
+            }
+
+            #content {
+                padding: 100px 16px 100px;
+            }
+            
+            #header nav {
+                display: none;
+            }
+
+            .ham {
+                display: block;
+            }
+
+            .sub_cont:nth-child(2n) > figure {
+                order: 0;
+            }
+
+            footer {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="header_container">
+            <a href="#">
+                <img src="logo.png" class="logo">
+            </a>
+            <nav>
+                <ul class="main_cate">
+                    <li class="main_cate_list"><a href="#">MENU01</a></li>
+                    <li class="main_cate_list"><a href="#">MENU02</a></li>
+                    <li class="main_cate_list"><a href="#">MENU03</a></li>
+                    <li class="main_cate_list"><a href="#">MENU04</a></li>
+                    <li class="main_cate_list"><a href="#">MENU05</a></li>
+                    <li class="main_cate_list"><a href="#">MENU06</a></li>
+                </ul>
+            </nav>    
+            <ul class="sub_cate">
+                <li><a href="#">ICON</a></li>
+                <li><a href="#">ICON</a></li>
+                <button class="ham">햄버거</button>
+            </ul>
+        </div>
+    </section>
+    <section id="main_banner">
+            <img src="banner.png">
+    </section>
+    <section id="content">
+        <div class="container">
+            <h2 class="title">Helping brands measure success</h2>
+            <div class="cont_wrapper">
+                <article class="sub_cont">
+                    <figure>
+                        <img src="content_01.png" alt="">
+                    </figure>
+                    <div class="scont">
+                        <h3 class="stitle">TikTok World</h3>
+
+                        <p class="subtext">틱톡은 광고의 새로운 시대를 위한 기반을 준비하고 있으며, 이번 틱톡 월드를 통해 브랜드와 마케터들이 틱톡 커뮤니티와의 관계를 재해석하고 모든 규모의 비즈니스에 실질적인 영향을 미칠 수 있는 도구가 될 새로운 솔루션과 연구 결과를 알려드리게 되어 매우 기쁘게 생각합니다.
+                            틱톡의 광고 제품들은 다른 틱톡 기능처럼 틱톡 커뮤니티의 경험을 향상하고, 창의력을 북돋우며, 즐거움을 주기 위해 고안되었습니다. 틱톡은 연구를 통해 사람들이 다른 플랫폼 대비 틱톡에서 더 오랜 시간 동안 광고를 시청한다는 것을 알게 되었습니다.
+                        </p>
+                    </div>
+                </article>
+                <article class="sub_cont">
+                    <figure>
+                        <img src="content_02.png" alt="">
+                    </figure>
+                    <div class="scont">
+                        <h3 class="stitle">틱톡, 10분 짜리 동영상도 올린다</h3>
+
+                        <p class="subtext">
+                            틱톡이 최대 동영상 제한 시간을 3분에서 10분으로 늘렸다. 
+                            서비스 시작 당시 제한 시간은 15초로 짧은 동영상 공유 서비스로 시작했던 틱톡의 제한 시간은 60초로 늘었고 지난해 7월 3분으로 자시 늘렸었다. 
+                            이번 제한 시간 연장은 요리, 메이크업, 교육 등 조금 더 많은 시간이 필요했던 콘텐츠 제작자들에게 반가운 소식이다. 
+                            이전까지는 여러 편으로 나눠 시리즈로 감상하라는 것을 권장해 왔지만 조금 더 자유로운 콘텐츠를 제작할 수 있게 됐다. 
+                        </p>
+                    </div>
+                </article>
+                <article class="sub_cont">
+                    <figure>
+                        <img src="content_03.png" alt="">
+                    </figure>
+                    <div class="scont">
+                        <h3 class="stitle">10대가 짧은 틱톡 영상만 좋아한다고?</h3>
+
+                        <p class="subtext">
+                            미국의 십대들이 틱톡(TikTok)보다 유튜브(Youtube)를 선호한다는 설문 결과가 나와 눈길을 끌고 있다. 
+                            월스트리트저널(이하 WSJ)과 IT전문 매체 매셔블(Mashable)은 이 소식을 전하면서 “일반적으로 십대들이 선호하여 성장한 것으로 알려진 틱톡이 현재 십대들에게는 두번째로 인기있는 것으로 밝혀졌다”고 전했다. 
+                            현재 미국의 거대 기술기업 중에는 SNS 플랫폼을 기반으로 성장한 경우가 많다. 대표적으로 현재 메타(Meta)의 페이스북이 있고, 최근 일론 머스크(Elon Musk)와 기업 인수 계약을 두고 소송을 진행하고 있는 트위터(Twitter)가 있다.     
+                        </p>
+                    </div>
+                </article>
+            </div>  
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <nav class="footer_nav">
+                <ul>
+                    <li class="foot_cont"><a href="#">Footer Content</a></li>
+                    <li class="foot_cont"><a href="#">Links 1</a></li>
+                    <li class="foot_cont"><a href="#">Links 2</a></li>
+                    <li class="foot_cont"><a href="#">Links 3</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">Copyright by only me!</p>
+        </div>
+    </footer>
+</body>
+</html>

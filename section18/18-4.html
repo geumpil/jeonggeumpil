@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: #333333;
+            position:relative;
+            margin: 0 auto;
+        }
+
+
+
+        .shape {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .circle {
+
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            position: absolute;
+            transform: scale(0);
+
+            animation-name : circle;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        .circle:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .circle:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes circle {
+            from {
+                opacity: 1;
+                transform: scale(0);
+            }
+            to {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="shape">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
