@@ -100,6 +100,7 @@
 
     /* 메인 컨텐츠 영역 */
     #content {
+        margin-bottom: 80px;
         padding: 100px 32px 0;
     }
     
@@ -110,12 +111,13 @@
     .head-text {
         font-size: 2rem;
         font-weight: 700;
+        margin-bottom: 20px;
     }
 
     .txt-cont {
         font-size: 1.25rem;
         font-weight: 500;
-        margin: 20px 0 75px 0;
+        margin-bottom: 75px;
         line-height: 1.5;
     }
 
@@ -123,16 +125,23 @@
         color: #0067e5;
     }
 
-    .main-cont {
+    .main-cont, .sub-cont {
         display: flex;
+        flex-flow: row wrap;
         justify-content: center;
+        margin-bottom: 52px;
         padding: 0 5px;
+    }
+
+    .main-cont > a {
+        width: fit-content;
+        height: fit-content;        
     }
 
     .main-cont-list {
         width: 240px;
         height: 260px;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
         border-radius: 5px;
         background-position: center 14px;
         background-repeat: no-repeat;
@@ -141,17 +150,245 @@
         box-sizing: border-box;
         margin: 10px;
         text-align: center;
-
     }
 
-    .main-cont-list > a > h4 {
-        margin-top: 116px; 
+    .main-cont-list:hover {
+        background-color: #f6f6f6;
+    }
+
+    .main-cont-list > h4 {
+        margin-top: 120px;
+        margin-bottom: 20px; 
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #0067e5;
+    }
+
+    .border-line {
+        border-top: 1px solid #ddd;
+        margin:0 auto 16px;
+        width: 50px;
+    }
+
+    .main-cont-list > p {
+        width: 200px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0 auto;
+        line-height: 1.5;
+        color: #414141;
     }
 
     .notice {
         background-image: url(image/notice.svg);
     }
+
+    .interface {
+        background-image: url(image/interface.svg);
+    }
     
+    .setting {
+        background-image: url(image/setting.svg);
+    }
+
+    .start {
+        background-image: url(image/start.svg);
+    }
+
+    .server {
+        background-image: url(image/server.svg);
+    }
+
+    .community {
+        background-image: url(image/community.svg);
+    }
+
+    .store {
+        background-image: url(image/store.svg);
+    }
+
+    .bill {
+        background-image: url(image/bill.svg);
+    }
+
+    .trust-safety {
+        background-image: url(image/trust-safety.svg);
+    }
+
+    .question {
+        background-image: url(image/question.svg);
+    }
+
+    /* 서브 컨텐츠 영역 */
+    .sub-text {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .game-developer {
+        background-image: url(image/game-developer.svg);
+    }
+
+    .twitter {
+        background-image: url(image/twitter.svg);
+    }
+
+    /* 푸터 영역 */
+    #footer {
+        background-color: #121315;
+        padding-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .footer-whole-container {
+        width: 100%;
+        max-width: 1100px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .etc {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #363636;
+    }
+
+    .etc > a {
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+        height: 42px;
+        color: white;
+        background-color: #38A55C;
+        border-radius: 25px;
+        text-align: center;
+        line-height: 42px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+
+    .display {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .display-list {
+        position: relative;
+    }
+
+    .display-list > a {
+        position: absolute;
+        opacity: 0.5;
+        left: 50%;
+    }
+
+    .desktop > a {
+        top: 60%;
+        transform: translate(-50%, -60%);
+    }
+
+    .android > a {
+        top: 50%;
+        transform: translate(-50%, -50%); 
+    }
+
+    .iphone > a {
+        top: 52%;
+        transform: translate(-50%, -52%); 
+    }
+
+    .tablet > a:nth-child(1) {
+        left: 36%;
+        top: 60%;
+        transform: translate(-34%, -60%); 
+    }
+    
+    .tablet > a:nth-child(2) {
+        left: 64%;
+        top: 60%;
+        transform: translate(-34%, -62%); 
+    }
+
+    .display-list > a:hover {
+        opacity: 1;
+    }
+
+    .desktop {
+        width: 346px;
+        height: 157px;
+        background-image: url(image/desktop.png);
+        background-size: 346px 157px;
+        box-sizing: border-box;
+    }
+
+    .android {
+        width: 86px;
+        height: 130px;
+        background-image: url(image/androidphone.png);
+        background-size: 86px 130px;
+        margin-top: 27px;
+    }
+
+    .iphone {
+        width: 86px;
+        height: 138px;
+        background-image: url(image/iphone.png);
+        background-size: 86px 138px;
+        margin-top: 19px;
+    }
+
+    .tablet {
+        width: 268px;
+        height: 150px;
+        background-image: url(image/tablet.png);
+        background-size: 268px 150px;
+        margin-top: 7px;
+    }
+
+    .footer-nav {
+        display: flex;
+        padding: 30px 30px;
+    }
+
+    .footer-menu-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-left: 180px;
+    }
+
+    .footer-menu-section {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-menu-section > li > a {
+        display: inline-block;
+        color: white;
+        line-height: 1.5;
+        padding: 4px 0;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .footer-menu-section > li > a:hover {
+        color: orange;
+    }
+
+    .job {
+        color: #3BA55C;
+    }
+
+    .line {
+        color: #363636;
+    }
     @media screen and (max-width:768px) {
         #header {
             padding: 0 16px;
@@ -170,8 +407,9 @@
         }
 
         #content {
-            padding: 0 16px;
+            padding: 100px 16px 0;
         }
+
     }
     </style>
 </head>
@@ -187,12 +425,18 @@
                     <li class="menu-list pc-view">
                         <a href="#">
                             <span>한국어</span>
-                            <img src="image/arrowbtn.svg" alt="lang">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"></path>
+                            </svg>
                         </a>
                     </li>
                     <li class="menu-list pc-view"><a href="#">문의 등록</a></li>
                     <li class="menu-list mob-view">
-                        <a href="#"><img src="image/navi.svg" alt="navigation" class="ham"></a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"></path>
+                            </svg>
+                        </a>
                     </li>
                     <li class="menu-list"><a href="#">로그인</a></li>
 
@@ -218,152 +462,156 @@
                 Discord를 시작한 지 얼마 안 되어 팁을 찾고 계신가요? 그렇다면, <a href="#">저희의 초보자를 위한 가이드를 확인해 보세요!</a></p>
         </div>
         <ul class="main-cont">
-            <li class="main-cont-list notice">
-                <a href="#">
-                    <h4>공지 사항</h4>
-                    <hr>
-                    <p>들어보세요. 무언가 심상치 않은 일이 벌어지고 있습니다.</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
-                    <h4>Discord 인터페이스</h4>
-                    <hr>
-                    <p>이 버튼은 무엇인가요?!</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+            <a href="#">
+                <li class="main-cont-list notice">  
+                        <h4>공지 사항</h4>
+                        <div class="border-line"></div>
+                        <p>들어보세요. 무언가 심상치 않은 일이 벌어지고 있습니다.</p>                
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list interface">
+                    
+                        <h4>Discord 인터페이스</h4>
+                        <div class="border-line"></div>
+                        <p>이 버튼은 무엇인가요?!</p>
+                    
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list setting">
                     <h4>계정 설정</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>당신도 당신의 계정도 특별한 눈송이입니다.</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list start">
                     <h4>시작하기</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>첫 단추를 제대로 끼워야 합니다!</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list server">
                     <h4>서버 설정</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>실내 장식 만큼 재미있는 것.</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list community">
                     <h4>커뮤니티 프로그램</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>HypeSquaders를 위한 광고, 파트너를 위한 파티</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list store">
                     <h4>Nitro</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>쓰러질 때까지 쇼핑하시면 안 돼요! 저희가 도와드릴게요.</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list bill">
                     <h4>청구서</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>은행 계좌 잔액을 보는 기분.</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list trust-safety">
                     <h4>신뢰 & 보안</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>안전하고 건전하게</p>
-                </a>
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a>
+            <a href="#">
+                <li class="main-cont-list question">
                     <h4>자주 묻는 질문</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>스스로 해결해 보아요.</p>
-                </a>
-            </li>
+                </li>
+            </a>
         </ul>
         <div class="sub-text">
             <h3>도움을 받을 수 있는 다른 방법</h3>
         </div>
         <ul class="sub-cont">
-            <li class="main-cont-list">
-                <a href="#">
+            <a href="#">
+                <li class="main-cont-list game-developer">
                     <h4>게임 개발자</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>Discord의 API와 SDK를 이용한 봇, 앱, 게임 개발 지원의 집!</p>
-                </a> 
-            </li>
-            <li class="main-cont-list">
-                <a href="#">
+                </li>
+            </a> 
+            <a href="#">
+                <li class="main-cont-list twitter">
                     <h4>Twitter</h4>
-                    <hr>
+                    <div class="border-line"></div>
                     <p>질문이 있으신가요? 저희에게 트윗을 보내주세요!</p>
-                </a> 
-            </li>
+                </li>
+            </a> 
         </ul>
     </section>
 
-    <footer>
-        <div class="etc">
-            <a href="#">자세히</a>
-            <ul class="display">
-                <li class="display-list desktop">
-                    <a href="#">
-                        <img src="image/etc_app.svg" alt="app">
-                    </a>
-                </li>
-                <li class="display-list android">
-                    <a href="#">
-                        <img src="image/android.svg" alt="app">
-                    </a>
-                </li>
-                <li class="display-list iphone">
-                    <a href="#">
-                        <img src="image/apple.svg" alt="app">
-                    </a>
-                </li>
-                <li class="display-list tablet">
-                    <a href="#">
-                        <img src="image/window.svg" alt="app">
-                    </a>
-                    <a href="#">
-                        <img src="image/xlink.svg" alt="app">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <a href="#" class="footer-logo">
-            <img src="image/footer-logo.svg" alt="footerlogo">
-        </a>
-        <nav class="footer-nav">
-            <div class="footer-menu-container">
-                <ul class="footer-menu-section">
-                    <li><a href="#">다운로드</a></li>
-                    <li><a href="#">지원</a></li>
-                    <li><a href="#">피드백</a></li>
-                    <li><a href="#">상태</a></li>
-                </ul>
-                <ul class="footer-menu-section">
-                    <li><a href="#">파트너</a></li>
-                    <li><a href="#">HypeSquad</a></li>
-                    <li><a href="#">상점</a></li>
-                    <li><a href="#">제품 이미지</a></li>
-                </ul>
-                <ul class="footer-menu-section">       
-                    <li><a href="#">회사</a></li>
-                    <li><a href="#">직업 ㅡ <span>구인</span></a></li>
-                    <li><a href="#">블로그</a></li>
-                    <li><a href="#">조건 & 개인 정보 보호</a></li>
+    <footer id="footer">
+        <div class="footer-whole-container">
+            <div class="etc">
+                <a href="#">자세히</a>
+                <ul class="display">
+                    <li class="display-list desktop">
+                        <a href="#">
+                            <img src="image/etc_app.svg" alt="app">
+                        </a>
+                    </li>
+                    <li class="display-list android">
+                        <a href="#">
+                            <img src="image/android.svg" alt="app">
+                        </a>
+                    </li>
+                    <li class="display-list iphone">
+                        <a href="#">
+                            <img src="image/apple.svg" alt="app">
+                        </a>
+                    </li>
+                    <li class="display-list tablet">
+                        <a href="#">
+                            <img src="image/window.svg" alt="app">
+                        </a>
+                        <a href="#">
+                            <img src="image/xlink.svg" alt="app">
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </nav>
+            <nav class="footer-nav">
+                <a href="#" class="footer-logo">
+                    <img src="image/footer-logo.svg" alt="footerlogo">
+                </a>
+                <div class="footer-menu-container">
+                    <ul class="footer-menu-section">
+                        <li><a href="#">다운로드</a></li>
+                        <li><a href="#">지원</a></li>
+                        <li><a href="#">피드백</a></li>
+                        <li><a href="#">상태</a></li>
+                    </ul>
+                    <ul class="footer-menu-section">
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">HypeSquad</a></li>
+                        <li><a href="#">상점</a></li>
+                        <li><a href="#">제품 이미지</a></li>
+                    </ul>
+                    <ul class="footer-menu-section">       
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">직업</a> <span class="line">ㅡ</span> <span class="job"> 구인</span></li>
+                        <li><a href="#">블로그</a></li>
+                        <li><a href="#">조건</a> <span class="line">&</span> <a href="#">개인 정보 보호</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </footer> 
 </body>
 </html>
